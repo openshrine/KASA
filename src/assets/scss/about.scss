@@ -1,0 +1,48 @@
+// src/pages/About.scss
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.dropdown {
+    width: 1000px;
+
+    margin-bottom: 10px;
+}
+
+.dropdown__button {
+    width: 100%;
+    background-color: #e74c3c; // Rouge
+    color: #fff;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.dropdown__arrow {
+    transition: transform 0.3s ease;
+}
+
+.dropdown__arrow.open {
+    transform: rotate(180deg);
+}
+
+.dropdown__content {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
