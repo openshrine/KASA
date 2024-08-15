@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Banner from '../components/banner';
+import Bandeau from '../components/bandeauAbout';
 import '../assets/scss/about.scss';
 
 function Dropdown({ title, content }) {
@@ -13,7 +14,10 @@ function Dropdown({ title, content }) {
         <div className="dropdown">
             <button className="dropdown__button" onClick={toggleDropdown}>
                 {title}
-                <span className={`dropdown__arrow ${isOpen ? 'open' : ''}`}>▼</span>
+                <i
+                    className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'} dropdown__arrow`}
+                    style={{ color: '#ffffff' }}
+                ></i>
             </button>
             {isOpen && <div className="dropdown__content">{content}</div>}
         </div>
@@ -25,6 +29,7 @@ function About() {
         <div>
             <div>
                 <Banner />
+                <Bandeau />
             </div>
             <div className="about">
 
@@ -44,7 +49,6 @@ function About() {
                     title="Sécurité"
                     content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes ques pour les voyageurs, chaque logement corrspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
                 />
-                {/* Ajoutez d'autres menus déroulants ici */}
             </div>
         </div>
     );

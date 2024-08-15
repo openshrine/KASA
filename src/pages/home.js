@@ -1,15 +1,34 @@
 // src/pages/Home.js
 import React from 'react';
 import Banner from '../components/banner';
+import Bandeau from '../components/bandeauHome';
+import logements from '../data.json';
+import { Link } from 'react-router-dom';
 import '../assets/scss/home.scss';
 
 function Home() {
     return (
         <div>
             <Banner />
-            <h1>Chez vous, partout et ailleurs</h1>
-            <p>Bienvenue sur la page d'accueil de KASA.</p>
+            <Bandeau />
+            <div className="home">
+
+                <div className="home__grid">
+                    {logements.map(logement => (
+                        <Link to={`/logement/${logement.id}`} key={logement.id} className="card">
+                            <div className="card__image" style={{ backgroundImage: `url(${logement.cover})` }}></div>
+                            <div className="card__info">
+                                <h2 className="card__title">{logement.title}</h2>
+                                <p className="card__location">{logement.location}</p>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </div>
         </div>
+
+
+
     );
 }
 

@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import About from './pages/about';
+import Logement from './pages/logement'
 import NotFound from './pages/notfound';
 import Footer from './components/footer';
 
@@ -12,6 +13,8 @@ function AppRouter() {
             <div className="app-container">
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/logement/:id" element={<Logement />} />
                     <Route path="/about" element={<About />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
