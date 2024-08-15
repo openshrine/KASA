@@ -25,6 +25,7 @@
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 10px;
+        color: #ff6060;
     }
 
     &__location {
@@ -62,9 +63,8 @@
     }
 
     &__details {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     &__description,
@@ -89,4 +89,35 @@
         font-size: 16px;
         margin-bottom: 5px;
     }
+}
+
+.logement__host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.logement__host-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.logement__rating {
+    margin-top: 10px;
+}
+
+.fa-star {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.fa-star.filled {
+    color: #ff6060;
+}
+
+.fa-star.empty {
+    color: #e3e3e3;
 }

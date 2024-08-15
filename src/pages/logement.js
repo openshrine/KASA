@@ -15,12 +15,23 @@ function Logement() {
         return <div>Logement non trouvé</div>;
     }
 
+    const generateStars = (rating) => {
+        const stars = [];
+        for (let i = 1; i <= 5; i++) {
+            stars.push(
+                <i
+                    key={i}
+                    className={`fa-solid fa-star ${i <= rating ? 'filled' : 'empty'}`}
+                ></i>
+            );
+        }
+        return stars;
+    };
+
     return (
         <div>
             <Banner />
             <div className="logement">
-
-
                 <div className="logement__header">
                     <Carousel pictures={logement.pictures} /> {/* Ajout du carrousel ici */}
                     <div className="logement__info">
@@ -35,13 +46,17 @@ function Logement() {
                     <div className="logement__host">
                         <p>{logement.host.name}</p>
                         <img src={logement.host.picture} alt={logement.host.name} className="logement__host-picture" />
+                        <div className="logement__rating">
+                            {generateStars(logement.rating)}
+                        </div>
                     </div>
+
                 </div>
 
                 <div className="logement__details">
-                    <span><Dropdown title="Description" content={logement.description} /></span>
+                    <div><Dropdown title="Description" content={logement.description} /></div>
 
-                    <span><Dropdown
+                    <div><Dropdown
                         title="Équipements"
                         content={
                             <ul>
@@ -50,7 +65,7 @@ function Logement() {
                                 ))}
                             </ul>
                         }
-                    /></span>
+                    /></div>
                 </div>
             </div>
         </div>
