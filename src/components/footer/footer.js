@@ -1,7 +1,7 @@
 // src/components/Footer.js
 import React from 'react';
 import logo from '../assets/logoKasa.png'; // Assurez-vous d'avoir un logo blanc dans ce dossier
-import '../assets/scss/footer.scss';
+import '../footer/footer.scss';
 
 function Footer() {
     return (

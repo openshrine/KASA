@@ -1,11 +1,11 @@
 // src/pages/Logement.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import logements from '../data.json';
-import Banner from '../components/banner';
-import Carousel from '../components/carousel';
-import Dropdown from '../components/dropdown';
-import '../assets/scss/logement.scss';
+import logements from '../../data.json';
+import Banner from '../../components/banner/banner';
+import Carousel from '../../components/carousel/carousel';
+import Dropdown from '../../components/dropdown/dropdown';
+import '../logement/logement.scss';
 
 function Logement() {
     const { id } = useParams();
@@ -54,18 +54,20 @@ function Logement() {
                 </div>
 
                 <div className="logement__details">
-                    <div><Dropdown title="Description" content={logement.description} /></div>
+                    <div className='logementPage'>
+                        <div><Dropdown title="Description" content={logement.description} /></div>
 
-                    <div><Dropdown
-                        title="Équipements"
-                        content={
-                            <ul>
-                                {logement.equipments.map((equipment, index) => (
-                                    <li key={index}>{equipment}</li>
-                                ))}
-                            </ul>
-                        }
-                    /></div>
+                        <div><Dropdown
+                            title="Équipements"
+                            content={
+                                <ul>
+                                    {logement.equipments.map((equipment, index) => (
+                                        <li key={index}>{equipment}</li>
+                                    ))}
+                                </ul>
+                            }
+                        /></div>
+                    </div>
                 </div>
             </div>
         </div>

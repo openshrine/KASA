@@ -1,10 +1,10 @@
 // src/pages/Home.js
 import React from 'react';
-import Banner from '../components/banner';
-import Bandeau from '../components/bandeauHome';
-import logements from '../data.json';
+import Banner from '../../components/banner/banner';
+import Bandeau from '../../components/bandeauHome/bandeauHome';
+import logements from '../../data.json';
 import { Link } from 'react-router-dom';
-import '../assets/scss/home.scss';
+import '../home/home.scss';
 
 function Home() {
     return (

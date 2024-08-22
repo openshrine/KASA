@@ -4,16 +4,12 @@
 }
 
 .dropdown__button {
-    width: 50%;
     background-color: #ff6060;
     color: white;
     padding: 10px;
     font-size: 16px;
     text-align: left;
     border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     cursor: pointer;
 }
 
@@ -30,4 +26,23 @@
     padding: 10px;
     background-color: #f6f6f6;
     border-radius: 5px;
+}
+
+.aboutPage .dropdown__button {
+    width: 100%;
+}
+
+.logementPage .logement__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.logementPage .dropdown__button {
+    width: 50%;
+
+}
+
+.logementPage .dropdown__content {
+    width: 47.5%;
 }

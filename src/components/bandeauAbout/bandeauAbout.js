@@ -1,6 +1,6 @@
 // src/components/Bandeau.js
 import React from 'react';
-import '../assets/scss/bandeauAbout.scss';
+import '../bandeauAbout/bandeauAbout.scss';
 
 function Bandeau() {
     return (

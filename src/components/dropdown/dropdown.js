@@ -1,8 +1,8 @@
 // src/components/Dropdown.js
 import React, { useState } from 'react';
-import '../assets/scss/dropdown.scss';
+import '../dropdown/dropdown.scss';
 
-function Dropdown({ title, content }) {
+function Dropdown({ title, content, customClass }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -10,7 +10,7 @@ function Dropdown({ title, content }) {
     };
 
     return (
-        <div className="dropdown">
+        <div className={`dropdown ${customClass}`}>
             <button className="dropdown__button" onClick={toggleDropdown}>
                 {title}
                 <span className={`dropdown__arrow ${isOpen ? 'open' : ''}`}>

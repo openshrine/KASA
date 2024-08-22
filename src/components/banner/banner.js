@@ -1,8 +1,8 @@
 // src/components/Banner.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logoKasa.png';
-import '../assets/scss/banner.scss';
+import logo from '../../assets/logoKasa.png';
+import '../banner/banner.scss';
 
 function Banner() {
     return (

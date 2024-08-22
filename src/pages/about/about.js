@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Banner from '../components/banner';
-import Bandeau from '../components/bandeauAbout';
-import '../assets/scss/about.scss';
+import Banner from '../../components/banner/banner';
+import Bandeau from '../../components/bandeauAbout/bandeauAbout';
+import '../about/about.scss';
 
 function Dropdown({ title, content }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,15 +11,17 @@ function Dropdown({ title, content }) {
     };
 
     return (
-        <div className="dropdown">
-            <button className="dropdown__button" onClick={toggleDropdown}>
-                {title}
-                <i
-                    className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'} dropdown__arrow`}
-                    style={{ color: '#ffffff' }}
-                ></i>
-            </button>
-            {isOpen && <div className="dropdown__content">{content}</div>}
+        <div className='aboutPage'>
+            <div className="dropdown">
+                <button className="dropdown__button" onClick={toggleDropdown}>
+                    {title}
+                    <i
+                        className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'} dropdown__arrow`}
+                        style={{ color: '#ffffff' }}
+                    ></i>
+                </button>
+                {isOpen && <div className="dropdown__content">{content}</div>}
+            </div>
         </div>
     );
 }
