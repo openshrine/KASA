@@ -1,4 +1,4 @@
-// src/pages/Logement.js
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import logements from '../../data.json';
@@ -44,9 +44,11 @@ function Logement() {
                         </div>
                     </div>
                     <div className="logement__host">
-                        <p>{logement.host.name}</p>
-                        <img src={logement.host.picture} alt={logement.host.name} className="logement__host-picture" />
-                        <div className="logement__rating">
+                        <div className="logement__host-info">
+                            <p>{logement.host.name}</p>
+                            <img src={logement.host.picture} alt={logement.host.name} className="logement__host-info-picture" />
+                        </div>
+                        <div className="logement__host-rating">
                             {generateStars(logement.rating)}
                         </div>
                     </div>
@@ -54,10 +56,9 @@ function Logement() {
                 </div>
 
                 <div className="logement__details">
-                    <div className='logementPage'>
-                        <div><Dropdown title="Description" content={logement.description} /></div>
-
-                        <div><Dropdown
+                    <div className="logement__dropdowns">
+                        <Dropdown title="Description" content={logement.description} />
+                        <Dropdown
                             title="Équipements"
                             content={
                                 <ul>
@@ -66,9 +67,10 @@ function Logement() {
                                     ))}
                                 </ul>
                             }
-                        /></div>
+                        />
                     </div>
                 </div>
+
             </div>
         </div>
     );

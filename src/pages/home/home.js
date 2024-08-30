@@ -1,4 +1,3 @@
-// src/pages/Home.js
 import React from 'react';
 import Banner from '../../components/banner/banner';
 import Bandeau from '../../components/bandeauHome/bandeauHome';

@@ -5,6 +5,7 @@ import Home from './pages/home/home';
 import About from './pages/about/about';
 import Logement from './pages/logement/logement'
 import NotFound from './pages/notfound/notfound';
+import Footer from './components/footer/footer'
 
 
 function AppRouter() {
@@ -18,6 +19,7 @@ function AppRouter() {
                     <Route path="/about" element={<About />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
+                <Footer />
 
             </div>
         </Router>

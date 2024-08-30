@@ -1,4 +1,4 @@
-// src/components/Bandeau.js
+
 import React from 'react';
 import '../bandeauHome/bandeauHome.scss';
 

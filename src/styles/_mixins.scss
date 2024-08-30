@@ -1,0 +1,36 @@
+// src/styles/_mixins.scss
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin responsive($property, $small, $medium, $large) {
+    #{$property}: $small;
+
+    @media (min-width: 768px) {
+        #{$property}: $medium;
+    }
+
+    @media (min-width: 1024px) {
+        #{$property}: $large;
+    }
+}
+
+@mixin badge($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+
+@mixin transition($property: all, $duration: 0.3s, $ease: ease-in-out) {
+    transition: $property $duration $ease;
+}
+
+@mixin transition($properties, $duration, $timing) {
+    transition: #{$properties} #{$duration} #{$timing};
+}

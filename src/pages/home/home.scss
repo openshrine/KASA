@@ -1,25 +1,30 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .home {
-    padding: 20px;
+    padding: $spacing-medium;
 
     h1 {
-        color: #333;
+        color: $text-color;
     }
 
     p {
-        font-size: 18px;
+        font-size: 1.125rem;
         line-height: 1.6;
     }
-}
-
-
-.home {
-    padding: 20px;
 
     &__grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
+        grid-template-columns: 1fr;
+        gap: $spacing-medium;
 
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width: 1024px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     }
 }
 
@@ -30,12 +35,12 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.2s ease;
+    @include transition(transform, 0.2s, ease);
 
 
-    /*&:hover {
+    &:hover {
         transform: scale(1.05);
-    }*/
+    }
 
     &__image {
         height: 200px;
@@ -44,17 +49,17 @@
     }
 
     &__info {
-        padding: 15px;
+        padding: $spacing-small;
     }
 
     &__title {
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: bold;
-        margin-bottom: 5px;
+        margin-bottom: $spacing-small;
     }
 
     &__location {
-        font-size: 14px;
+        font-size: 0.875rem;
         color: #777;
     }
 }
