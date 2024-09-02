@@ -16,7 +16,7 @@
     transition: transform 0.3s ease;
 }
 
-.dropdown__arrow.open {
+.dropdown__arrow.close {
     transform: rotate(180deg);
 }
 
@@ -26,6 +26,11 @@
     background-color: #f6f6f6;
     border-radius: 5px;
 }
+
+ul {
+    list-style-type: none;
+}
+
 
 .aboutPage .dropdown__button {
     width: 100%;

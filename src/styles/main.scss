@@ -1,5 +1,40 @@
-// src/styles/main.scss
-
 @import 'variables';
 @import 'mixins';
 @import 'base';
+
+.app-container {
+    min-height: 100vh;
+    flex-direction: column;
+
+    .main-content {
+        flex: 1;
+        padding-bottom: 120px;
+    }
+
+    .footer {
+        background-color: #000000;
+        color: #fff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .footer__logo {
+        height: 40px;
+        margin-bottom: 10px;
+        filter: invert(100%) saturate(0%);
+    }
+
+    .footer__text {
+        margin: 0;
+        font-size: 14px;
+    }
+}

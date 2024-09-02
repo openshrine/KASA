@@ -5,13 +5,13 @@ import logements from '../../data.json';
 import { Link } from 'react-router-dom';
 import '../home/home.scss';
 
+
 function Home() {
     return (
         <div>
             <Banner />
             <Bandeau />
             <div className="home">
-
                 <div className="home__grid">
                     {logements.map(logement => (
                         <Link to={`/logement/${logement.id}`} key={logement.id} className="card">
@@ -24,6 +24,7 @@ function Home() {
                     ))}
                 </div>
             </div>
+
         </div>
 
 

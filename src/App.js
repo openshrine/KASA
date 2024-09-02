@@ -1,12 +1,15 @@
 import React from 'react';
 import AppRouter from './approuter';
-import './styles/main.scss'
-
+import Footer from './components/footer/footer';
+import './styles/main.scss';
 
 function App() {
   return (
-    <div>
-      <AppRouter />
+    <div className="app-container">
+      <div className="main-content">
+        <AppRouter />
+      </div>
+      <Footer />
     </div>
   );
 }

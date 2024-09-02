@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: white;
 }
 
 .notfound-content {
@@ -11,13 +12,21 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 20px;
+    margin: 10px;
 }
 
 .notfound-content h1 {
-    font-size: 10rem;
+    font-size: 20rem;
     color: #ff6060;
     margin: 0;
+
+    p {
+        margin-top: 20px;
+    }
+
+    a {
+        margin-top: 20px;
+    }
 }
 
 .notfound-content p {
@@ -27,16 +36,15 @@
 }
 
 .back-home-link {
-    color: #ff6060;
+    color: black;
     font-size: 1rem;
-    text-decoration: none;
-    border: 1px solid #ff6060;
+
+
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+
 
     &:hover {
-        background-color: #ff6060;
-        color: #fff;
+        text-decoration: underline;
     }
 }

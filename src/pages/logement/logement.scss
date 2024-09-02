@@ -1,7 +1,9 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
+
 .logement {
+    flex: 1;
     padding: $spacing-medium;
 
     &__header {
@@ -92,13 +94,15 @@
 
     &__details {
         display: flex;
+        flex-direction: column;
         gap: $spacing-medium;
     }
 
     &__dropdowns {
-        display: flex;
-        flex-wrap: wrap;
-        gap: $spacing-medium;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: $spacing-medium;
     }
 
     &__description,
@@ -113,8 +117,9 @@
     }
 
     .dropdown {
-        width: 300px;
-        min-width: 250px;
+        width: 100%;
+
+        position: relative;
     }
 
     .dropdown__button {
@@ -122,7 +127,6 @@
         background-color: $primary-color;
         color: $white-color;
         padding: $spacing-small;
-        text-align: left;
         font-size: 1rem;
         cursor: pointer;
         border-radius: 5px;
@@ -135,10 +139,19 @@
         width: 100%;
         background-color: $white-color;
         border: 1px solid $gray-color-light;
-        padding: $spacing-small;
+        padding: 5px;
         border-radius: 5px;
         margin-top: $spacing-small;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         overflow: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+    }
+
+    ul {
+        padding-left: 5px;
+        padding-right: -5px;
     }
 }

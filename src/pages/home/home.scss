@@ -1,6 +1,19 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
+
+body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    flex: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .home {
     padding: $spacing-medium;
 

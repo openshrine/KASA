@@ -5,6 +5,7 @@ import logements from '../../data.json';
 import Banner from '../../components/banner/banner';
 import Carousel from '../../components/carousel/carousel';
 import Dropdown from '../../components/dropdown/dropdown';
+import NotFound from '../notfound/notfound';
 import '../logement/logement.scss';
 
 function Logement() {
@@ -12,7 +13,7 @@ function Logement() {
     const logement = logements.find(logement => logement.id === id);
 
     if (!logement) {
-        return <div>Logement non trouvé</div>;
+        return <NotFound message="Ce logement n'existe pas." />;
     }
 
     const generateStars = (rating) => {
