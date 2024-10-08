@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/kasa/static/css/main.8c5bff86.css",
+    "main.js": "/kasa/static/js/main.a5d9cd33.js",
+    "static/js/453.9701a2b0.chunk.js": "/kasa/static/js/453.9701a2b0.chunk.js",
+    "static/media/valley.png": "/kasa/static/media/valley.388a325a41a4341c7ba0.png",
+    "static/media/mountain.png": "/kasa/static/media/mountain.7b295fcb71808167cd75.png",
+    "index.html": "/kasa/index.html",
+    "main.8c5bff86.css.map": "/kasa/static/css/main.8c5bff86.css.map",
+    "main.a5d9cd33.js.map": "/kasa/static/js/main.a5d9cd33.js.map",
+    "453.9701a2b0.chunk.js.map": "/kasa/static/js/453.9701a2b0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c5bff86.css",
+    "static/js/main.a5d9cd33.js"
+  ]
+}
